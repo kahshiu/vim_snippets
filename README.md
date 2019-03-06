@@ -5,5 +5,5 @@ To use,
 2. Locate this folder within plugin: vim-snippets
 - $HOME/.vim/plugged/vim-snippets/UltiSnips, at same hierarchy level
 - $HOME/.vim/plugged/vim-snippets/vim_snippets, example path
-- eg. C:\Users\kschong\.vim\plugged\vim-snippets
+- eg. C:\Users\kschong\.vim\plugged\vim-snippets\vim_snippets
 
