@@ -1,0 +1,49 @@
+snippet cffunction
+<cffunction name=${0} access="public" returntype="" output="false">
+</cffunction>
+endsnippet
+snippet cfcomponent	
+<cfcomponent displayname="false">
+	<cffunction name=${0} access="public" returntype="" output="false">
+	</cffunction>
+</cfcomponent>
+endsnippet
+snippet cfapplication	
+<cfcomponent displayname="false">
+	<cfset this.applicationTimeout = >
+	<cfset this.sessionManagement = >
+	<cfset this.sessionTimout = >
+	<cfset this.setClientCookies = >
+	<cfset this.setDomainCookies = >
+	<cfset this.clientManagement = >
+	<cfset this.clientStorage    = >
+
+	<cfset this.loginStorage     = >
+	<cfset this.scriptProtect    = >
+
+	<cffunction name=onApplicationStart access="public" returntype="" output="false"> 
+	</cffunction>
+
+	<cffunction name=onApplicationEnd   access="public" returntype="" output="false"> 
+	</cffunction>
+
+	<cffunction name=onSessionStart     access="public" returntype="" output="false"> 
+	</cffunction>
+
+	<cffunction name=onSessionEnd       access="public" returntype="" output="false"> 
+	</cffunction>
+
+	<cffunction name=onRequestStart     access="public" returntype="" output="false"> 
+	</cffunction>
+
+	<cffunction name=onRequestEnd       access="public" returntype="" output="false"> 
+	</cffunction>
+
+	<cffunction name=onError            access="public" returntype="" output="false"> 
+	</cffunction>
+</cfcomponent>
+endsnippet
+snippet dump	
+<cfdump var=##>
+<cfabort>
+endsnippet
