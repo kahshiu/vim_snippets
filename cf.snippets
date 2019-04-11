@@ -1,10 +1,21 @@
 snippet cffunction
 <cffunction name=${0} access="public" returntype="" output="false">
+	<cfargument name="" type="" required="">
 </cffunction>
+endsnippet
+snippet cfargument
+	<cfargument name="" type="" required="">
+endsnippet
+snippet cfparam
+<cfparam name="${0}" default="">
 endsnippet
 snippet cfcomponent	
 <cfcomponent displayname="false">
+	<cffunction name=init access="public" returntype="any" output="false">
+		<cfreturn this>
+	</cffunction>
 	<cffunction name=${0} access="public" returntype="" output="false">
+		<cfreturn >
 	</cffunction>
 </cfcomponent>
 endsnippet
@@ -21,29 +32,121 @@ snippet cfapplication
 	<cfset this.loginStorage     = >
 	<cfset this.scriptProtect    = >
 
-	<cffunction name=onApplicationStart access="public" returntype="" output="false"> 
+	<cffunction name="onApplicationStart" access="public" returntype="" output="false"> 
+		<cfargument name="" type="" required="">
 	</cffunction>
 
-	<cffunction name=onApplicationEnd   access="public" returntype="" output="false"> 
+	<cffunction name="onApplicationEnd"   access="public" returntype="" output="false"> 
+		<cfargument name="" type="" required="">
 	</cffunction>
 
-	<cffunction name=onSessionStart     access="public" returntype="" output="false"> 
+	<cffunction name="onSessionStart"     access="public" returntype="" output="false"> 
+		<cfargument name="" type="" required="">
 	</cffunction>
 
-	<cffunction name=onSessionEnd       access="public" returntype="" output="false"> 
+	<cffunction name="onSessionEnd"       access="public" returntype="" output="false"> 
+		<cfargument name="" type="" required="">
 	</cffunction>
 
-	<cffunction name=onRequestStart     access="public" returntype="" output="false"> 
+	<cffunction name="onRequest"     access="public" returntype="" output="false"> 
+		<cfargument name="" type="" required="">
 	</cffunction>
 
-	<cffunction name=onRequestEnd       access="public" returntype="" output="false"> 
+	<cffunction name="onRequestStart"     access="public" returntype="" output="false"> 
+		<cfargument name="" type="" required="">
 	</cffunction>
 
-	<cffunction name=onError            access="public" returntype="" output="false"> 
+	<cffunction name="onRequestEnd"       access="public" returntype="" output="false"> 
+		<cfargument name="" type="" required="">
+	</cffunction>
+
+	<cffunction name="onError"            access="public" returntype="" output="false"> 
+		<cfargument name="" type="" required="">
 	</cffunction>
 </cfcomponent>
 endsnippet
 snippet dump	
-<cfdump var=##>
+<cfdump var=#${0}#>
 <cfabort>
 endsnippet
+snippet comment	
+<!--- 
+${0} --->
+endsnippet
+snippet query	
+<cfquery name="q" datasource=#application.vars.db#>
+${1}
+</cfquery>
+endsnippet
+snippet loopquery	
+<cfloop index="i" from="1" to="#q.recordCount#"> 
+</cfloop> 
+endsnippet
+snippet looparray	
+<cfloop index="i" array="#arr#"> 
+	#i#
+</cfloop>
+endsnippet                       
+snippet loopstruct	
+<cfloop collection="#${0}#" index="k" item="v">
+endsnippet
+snippet queryparam
+	<cfqueryparam value="#url.groupId#" cfsqltype="cf_sql_integer"> 
+endsnippet                       
+snippet cf_sql_i
+	cf_sql_integer 
+endsnippet                       
+snippet cf_sql_bigint
+endsnippet                       
+snippet cf_sql_bit
+endsnippet                       
+snippet cf_sql_char
+endsnippet                       
+snippet cf_sql_blob
+endsnippet                       
+snippet cf_sql_clob
+endsnippet                       
+snippet cf_sql_nclob
+endsnippet                       
+snippet cf_sql_date
+endsnippet                       
+snippet cf_sql_decimal
+endsnippet                       
+snippet cf_sql_double
+endsnippet                       
+snippet cf_sql_float
+endsnippet                       
+snippet cf_sql_idstamp
+endsnippet                       
+snippet cf_sql_integer
+endsnippet                       
+snippet cf_sql_longvarchar
+endsnippet                       
+snippet cf_sql_longnvarchar
+endsnippet                       
+snippet cf_sql_money
+endsnippet                       
+snippet cf_sql_money4
+endsnippet                       
+snippet cf_sql_nchar
+endsnippet                       
+snippet cf_sql_nvarchar
+endsnippet                       
+snippet cf_sql_numeric
+endsnippet                       
+snippet cf_sql_real
+endsnippet                       
+snippet cf_sql_refcursor
+endsnippet                       
+snippet cf_sql_smallint
+endsnippet                       
+snippet cf_sql_sqlxml
+endsnippet                       
+snippet cf_sql_time
+endsnippet                       
+snippet cf_sql_timestamp
+endsnippet                       
+snippet cf_sql_tinyint
+endsnippet                       
+snippet cf_sql_varchar
+endsnippet                       
